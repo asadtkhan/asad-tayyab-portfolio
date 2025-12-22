@@ -427,6 +427,7 @@
                 .container {
                     display: flex;
                     flex-direction: column;
+                    padding-bottom: 20px;
                 }
 
                 header,
@@ -478,6 +479,7 @@
                 }
                 #mobile-contact {
                     order: 9;
+                    margin-bottom: 0 !important;
                 }
                 .profile-image {
                     width: 100%;
@@ -599,6 +601,13 @@
                     overflow-y: auto;
                     padding: 16px;
                 }
+
+                .section:last-of-type, .full-width-section:last-of-type {
+                    margin-bottom: 0;
+                }
+                body {
+                    padding-bottom: 0;
+                } 
             }
 
             @keyframes fadeIn {
