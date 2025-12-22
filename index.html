@@ -425,45 +425,36 @@
             }
             @media (max-width: 768px) {
                 .container {
-                    padding: 30px 20px;
-                }
-                h1 {
-                    font-size: 2.2rem;
-                    text-align: center;
-                }
-                .section-title {
-                    font-size: 1.6rem;
-                }
-                .intro-text h2 {
-                    font-size: 1.6rem;
-                    text-align: center;
-                }
-                .intro-text p {
-                    text-align: center;
-                }
-                .skills-grid,
-                .tools-grid {
-                    grid-template-columns: 1fr;
-                }
-                .work-item .title-location,
-                .work-item .company-date {
-                    flex-direction: column;
-                    gap: 4px;
-                }
-                .work-item .location {
-                    white-space: normal;
-                } /* Mobile reordering */
-                .two-column-layout {
                     display: flex;
                     flex-direction: column;
-                    gap: 40px;
+                }
+
+                header,
+                .profile-image,
+                #mobile-about,
+                #mobile-skills,
+                #mobile-work,
+                #mobile-projects,
+                #mobile-testimonials,
+                #mobile-education,
+                #mobile-certifications,
+                #mobile-contact {
+                    display: block;
+                    width: 100%;
+                }
+
+                .two-column-layout,
+                .left-column,
+                .right-column,
+                .full-width-section {
+                    display: contents;
+                }
+                header {
+                    order: 0;
                 }
                 .profile-image {
-                    max-width: 200px;
-                    margin: 0 auto 30px;
-                    display: block;
                     order: 1;
-                } /* Set specific order for mobile */
+                }
                 #mobile-about {
                     order: 2;
                 }
@@ -488,16 +479,97 @@
                 #mobile-contact {
                     order: 9;
                 }
-                .left-section-title {
-                    font-size: 1.6rem;
+                .profile-image {
+                    width: 100%;
+                    max-width: 100%;
+                    height: auto;
+                    margin: 0 auto 24px;
+                    border-radius: 14px;
+                    object-fit: cover;
                 }
-                .work-examples {
-                    grid-template-columns: 1fr;
+                .intro-text h2 {
+                    font-size: 1.15rem;
+                    line-height: 1.35;
+                    margin-bottom: 12px;
+                }
+                .section,
+                .full-width-section {
+                    margin-bottom: 24px;
+                }
+
+                .section-title,
+                .left-section-title {
+                    margin-bottom: 12px;
+                }
+
+                .subsection-title {
+                    margin: 12px 0 8px;
+                }
+                .work-item .title-location {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 4px;
+                    margin-bottom: 6px;
+                }
+
+                .work-item h3 {
+                    font-size: 1.1rem;
+                    line-height: 1.35;
+                    margin: 0;
+                }
+
+                .work-item .company-date {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 2px;
+                    margin-bottom: 8px;
+                }
+
+                .work-item .company {
+                    font-size: 14px;
+                    font-weight: 600;
+                    color: #d81b60;
+                    line-height: 1.4;
+                }
+
+                .work-item .company-date span {
+                    font-size: 13px;
+                    color: #78909c;
+                    font-weight: 500;
+                    line-height: 1.4;
+                }
+
+                .work-item .location {
+                    font-size: 13px;
+                    color: #78909c;
+                    font-weight: 500;
+                    line-height: 1.4;
+                    margin-top: 2px;
+                }
+
+                .work-item li {
+                    font-size: 13px;
+                    line-height: 1.55;
                 }
                 .testimonials-grid {
                     grid-template-columns: 1fr;
+                    gap: 16px;
+                }
+
+                .testimonial-card {
+                    height: 260px;
+                    overflow: hidden;
+                }
+
+                .testimonial-content {
+                    max-height: 180px;
+                    overflow-y: auto;
+                    padding: 16px;
                 }
             }
+
             @keyframes fadeIn {
                 from {
                     opacity: 0;
@@ -657,7 +729,7 @@
                             </div>
                             <div class="company-date">
                                 <p class="company">Expedia Group / TekSystems</p>
-                                <span>Sep 2024 - Oct 2025</span>
+                                <span>Sep 2024 - Present</span>
                             </div>
                             <ul>
                                 <li>
@@ -828,7 +900,7 @@
                         <div class="testimonial-content">
                             <p class="testimonial-text">
                                 Asad is a great team player. Though joined as a fresher in Paytm but he learned things
-                                so fast and was able to deliver things within a short span of time.<br /><br />
+                                so fast and was able to deliver things within a short span of time.
                                 Asad has great problem solving skills which also get showcased in his work. Apart from
                                 technical skills Asad also learned the payment domain knowledge very fast.
                             </p>
@@ -844,14 +916,14 @@
                                 I had the pleasure of managing Asad Tayyab at Paytm. Asad impressed me from the start
                                 with his technical skills and willingness to help others. He played a key role in the
                                 Recko Project, designing and developing a critical microservice that handled daily data
-                                processing for over 70 million records.<br /><br />
+                                processing for over 70 million records.
                                 Asad's leadership shone when I assigned him a complex data flow task. This project
                                 required him to diversify his skillset by working with AWS services, OpenSearch, and
                                 MySQL—demonstrating his adaptability. He readily took ownership, demonstrating strong
                                 initiative and a willingness to tackle new areas. Asad didn't work in isolation. He
                                 proactively reached out to other teams like QA, DevOps, Product, and UI to understand
                                 their needs and ensure seamless integration. This showcased his exceptional
-                                communication and collaboration skills.<br /><br />
+                                communication and collaboration skills.
                                 Asad is a dedicated team player with a positive attitude. He's always eager to learn and
                                 contribute, making him a valuable asset to any team. I highly recommend him!
                             </p>
