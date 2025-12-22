@@ -488,9 +488,16 @@
                     object-fit: cover;
                 }
                 .intro-text h2 {
-                    font-size: 1.25rem;
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    gap: 6px;
+                    font-size: 1.15rem;
                     line-height: 1.35;
-                    margin-bottom: 12px;
+                }
+
+                .intro-text h2 span:last-child {
+                    white-space: nowrap; /* Product Manager never breaks */
                 }
                 .section,
                 .full-width-section {
@@ -505,6 +512,7 @@
                 .subsection-title {
                     margin: 12px 0 8px;
                 }
+
                 .work-item .title-location {
                     display: flex;
                     flex-direction: column;
@@ -553,6 +561,29 @@
                     font-size: 13px;
                     line-height: 1.55;
                 }
+
+                .work-examples {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 16px;
+                }
+
+                .work-example-card {
+                    width: 100%;
+                    border-radius: 12px;
+                }
+
+                .work-example-card img {
+                    height: 180px; /* closer to education card density */
+                    object-fit: cover;
+                }
+
+                .work-example-card h4 {
+                    font-size: 13px;
+                    line-height: 1.4;
+                    padding: 12px 14px;
+                }
+
                 .testimonials-grid {
                     grid-template-columns: 1fr;
                     gap: 16px;
@@ -900,9 +931,9 @@
                         <div class="testimonial-content">
                             <p class="testimonial-text">
                                 Asad is a great team player. Though joined as a fresher in Paytm but he learned things
-                                so fast and was able to deliver things within a short span of time.
-                                Asad has great problem solving skills which also get showcased in his work. Apart from
-                                technical skills Asad also learned the payment domain knowledge very fast.
+                                so fast and was able to deliver things within a short span of time. Asad has great
+                                problem solving skills which also get showcased in his work. Apart from technical skills
+                                Asad also learned the payment domain knowledge very fast.
                             </p>
                         </div>
                         <div class="testimonial-author">
@@ -916,16 +947,15 @@
                                 I had the pleasure of managing Asad Tayyab at Paytm. Asad impressed me from the start
                                 with his technical skills and willingness to help others. He played a key role in the
                                 Recko Project, designing and developing a critical microservice that handled daily data
-                                processing for over 70 million records.
-                                Asad's leadership shone when I assigned him a complex data flow task. This project
-                                required him to diversify his skillset by working with AWS services, OpenSearch, and
-                                MySQL—demonstrating his adaptability. He readily took ownership, demonstrating strong
-                                initiative and a willingness to tackle new areas. Asad didn't work in isolation. He
-                                proactively reached out to other teams like QA, DevOps, Product, and UI to understand
-                                their needs and ensure seamless integration. This showcased his exceptional
-                                communication and collaboration skills.
-                                Asad is a dedicated team player with a positive attitude. He's always eager to learn and
-                                contribute, making him a valuable asset to any team. I highly recommend him!
+                                processing for over 70 million records. Asad's leadership shone when I assigned him a
+                                complex data flow task. This project required him to diversify his skillset by working
+                                with AWS services, OpenSearch, and MySQL—demonstrating his adaptability. He readily took
+                                ownership, demonstrating strong initiative and a willingness to tackle new areas. Asad
+                                didn't work in isolation. He proactively reached out to other teams like QA, DevOps,
+                                Product, and UI to understand their needs and ensure seamless integration. This
+                                showcased his exceptional communication and collaboration skills. Asad is a dedicated
+                                team player with a positive attitude. He's always eager to learn and contribute, making
+                                him a valuable asset to any team. I highly recommend him!
                             </p>
                         </div>
                         <div class="testimonial-author">
