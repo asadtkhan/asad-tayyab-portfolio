@@ -479,78 +479,26 @@
         }
 
         @media (max-width: 768px) {
-            .container {
-                padding: 30px 20px;
-            }
-
-            h1 {
-                font-size: 2.2rem;
-                text-align: center;
-            }
-
-            .section-title {
-                font-size: 1.6rem;
-            }
-
-            .intro-text h2 {
-                font-size: 1.6rem;
-                text-align: center;
-            }
-
-            .intro-text p {
-                text-align: center;
-            }
-
-            .skills-grid, .tools-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .work-item .title-location,
-            .work-item .company-date {
-                flex-direction: column;
-                gap: 4px;
-            }
-
-            .work-item .location {
-                white-space: normal;
-            }
-
-            /* Mobile reordering */
             .two-column-layout {
-                display: flex;
-                flex-direction: column;
-                gap: 40px;
+            display: block;
             }
 
-            .profile-image {
-                max-width: 200px;
-                margin: 0 auto 30px;
-                display: block;
-                order: 1;
-            }
+    	.left-column, .right-column {
+        	display: contents;
+    		}
 
-            /* Set specific order for mobile */
-            #mobile-about { order: 2; }
-            #mobile-skills { order: 3; }
-            #mobile-work { order: 4; }
-            #mobile-projects { order: 5; }
-            #mobile-education { order: 6; }
-            #mobile-certifications { order: 7; }
-            #mobile-testimonials { order: 8; }
-            #mobile-contact { order: 9; }
+    /* Mobile ordering */
+    	.profile-image { order: 1; }
 
-            .left-section-title {
-                font-size: 1.6rem;
-            }
-
-            .work-examples {
-                grid-template-columns: 1fr;
-            }
-
-            .testimonials-grid {
-                grid-template-columns: 1fr;
-            }
-        }
+    	#mobile-about { order: 2; }
+    	#mobile-skills { order: 3; }
+    	#mobile-work { order: 4; }
+    	#mobile-projects { order: 5; }
+    	#mobile-education { order: 6; }
+    	#mobile-certifications { order: 7; }
+    	#mobile-testimonials { order: 8; }
+    	#mobile-contact { order: 9; }
+		}
 
         @keyframes fadeIn {
             from {
